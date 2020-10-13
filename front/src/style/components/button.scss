@@ -1,0 +1,30 @@
+.btn-alizz {
+    background-color: $aliz;
+    color: $white;
+    border: none;
+    height: auto;
+    border-radius: 30px;
+    margin-top: 70px;
+    // margin: 50px 0;
+    font-size: 23px;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 0;
+    &:hover {
+        background-color: $white;
+        border: 2px solid $aliz;
+        color: $aliz;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .btn-alizz {
+        // margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991.98px) {
+    .btn-alizz  {
+    //   margin-left: 16%;
+    }
+}

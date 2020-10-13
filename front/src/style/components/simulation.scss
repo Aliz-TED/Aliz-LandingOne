@@ -1,0 +1,142 @@
+.simulation-view {
+    position: relative;
+    background-color: $dark;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+    .text-danger{
+        color: $strongred;
+        margin-bottom: -20px;
+        margin-left: 15px;
+        padding: 0;
+        font-size: 12px;
+    }
+    .header-simulation {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        h4 {
+            padding: 40px 0 15px 10%;
+            width: 100%;
+            color: $aliz;
+            text-transform: uppercase;
+            font-family: "Oswald";
+            font-size: 27px;
+        }
+    }
+    form {
+        .all-input {
+            display: flex;
+            padding-left: 10%;
+            margin: 50px 0;
+            .containerInput {
+                position: relative;
+                margin-right: 10px;
+                label {
+                    position: absolute;
+                    top: 0;
+                    left: 10%;
+                    width: 100%;
+                    color: $darkgrey;
+                    transition: 0.2s all;
+                    cursor: text;
+                    font-weight: bold;
+                }
+
+                input {
+                    height: 50px;
+                    background-color: rgb(255, 255, 255);
+                    width: 100%;
+                    border: 0;
+                    outline: 0;
+                    padding: 0.5rem 1rem;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    color: $aliz;
+                    &:invalid {
+                        outline: 0;
+                    }
+                    &:focus ~ label,
+                    &:valid ~ label {
+                        top: -34px;
+                        color: $white;
+                    }
+                }
+            }
+            button {
+                background-color: $aliz;
+                color: $white;
+                border: none;
+                height: 50px;
+                border-radius: 30px;
+                border: 2px solid $aliz;
+                font-size: 20px;
+                padding: 0 60px;
+                margin-left: 20px;
+                &:hover {
+                    background-color: $white;
+                    border: 2px solid $aliz;
+                    color: $aliz;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .simulation-view {
+        position: relative;
+        top: unset;
+        height: auto;
+        margin-top: 15vh;
+        width: 105vw;
+        form {
+            .all-input {
+                padding-left: 10%;
+                margin: 50px 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 991.98px) {
+    .simulation-view {
+        position: relative;
+        top: unset;
+        height: auto;
+        margin-top: 15vh;
+        width: 105vw;
+        .header-simulation {
+            margin: auto;
+            h4 {
+                padding: 40px 0;
+                text-align: center;
+                font-size: 23px;               
+            }
+        }
+        form {
+            .all-input {
+                flex-direction: column;
+                width: 60%;
+                padding-left: unset;
+                margin: 50px auto;
+                .containerInput {
+                    margin-bottom: 50px;
+                    input {
+                        width: 100%;
+                    }
+                }
+                button {
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .simulation-view {
+        margin-top: 22vh;
+        width: 107vw;
+    }
+}

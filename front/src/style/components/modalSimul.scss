@@ -1,0 +1,172 @@
+.simul-popup {
+    .modal-header {
+        position: relative;
+        justify-content: center;
+        .column-header {
+            .modal-bg {
+                border-radius: 50%;
+                background-color: $aliz;
+                padding: 30px;
+                border: 5px solid $white;
+                img {
+                    width: 110px;
+                    height: auto;
+                }
+            }
+            .modal-title {
+                font-size: 30px;
+            }
+        }
+    }
+    .modal-body {
+        padding: 40px 30px;
+        .spend-money,
+        .spend-time {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            .money-icon,
+            .time-icon {
+                width: 120px;
+                height: auto;
+                margin: auto;
+                margin-bottom: 0;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            h4 {
+                text-align: center;
+                font-weight: bold;
+                font-family: "Oswald", sans-serif;
+                color: $aliz;
+                font-size: 50px;
+                margin: 15px 0 35px 0;
+            }
+            p {
+                padding: 0 40px;
+                text-align: center;
+                font-size: 21px;
+                font-weight: bold;
+                font-family: "Oswald", sans-serif;
+            }
+        }
+    }
+    .modal-footer {
+        .btn-aliz {
+            font-weight: bold;
+            padding: 20px 30px;
+            &:hover {
+                background-color: $white;
+                border: 1px solid $aliz;
+                color: $aliz;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991.98px) {
+    .simul-popup {
+        .modal-header {
+            .column-header {
+                .modal-title {
+                    margin: 25px 0;
+                }
+            }
+        }
+        .modal-body {
+            padding: 40px 30px;
+            .spend-money {
+                margin-bottom: 50px;
+            }
+            .spend-money,
+            .spend-time {
+                .money-icon,
+                .time-icon {
+                    width: 100px;
+                }
+                h4 {
+                    font-size: 30px;
+                    margin: 15px 0 20px 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 575.98px) {
+    .simul-popup {
+        .modal-header {
+            .column-header {
+                .modal-bg {
+                    padding: 30px;
+                    border: 3px solid $white;
+                    img {
+                        width: 80px;
+                        height: auto;
+                    }
+                }
+                .modal-title {
+                    margin: 25px 0;
+                }
+            }
+        }
+        .modal-body {
+            padding: 40px 30px;
+            .spend-money {
+                margin-bottom: 50px;
+            }
+            .spend-money,
+            .spend-time {
+                .money-icon,
+                .time-icon {
+                    width: 80px;
+                }
+                h4 {
+                    font-size: 23px;
+                    margin: 15px 0 20px 0;
+                }
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+        .modal-footer {
+            .btn-aliz {
+                padding: 10px 30px;
+                font-size: 17px;
+                margin-top: -10px;
+            }
+        }
+    }
+}
+
+
+
+
+/* MODAL DE SIMULATION -> IF CALCUL = 0 */
+.error-modal {
+    .modal-header {
+        background-color: $orange;
+        .column-header {
+            .modal-bg {
+                svg {
+                    background-color: $orange;
+                }
+            }
+        }
+    }
+    .modal-footer {
+        .btn-aliz {
+            background-color: $yellow;
+            border: 1px solid $white;
+            font-weight: bold;
+            font-size: 28px;
+            &:hover {
+                background-color: $white;
+                border: 1px solid $yellow;
+                color: $yellow;
+            }
+        }
+    }
+}

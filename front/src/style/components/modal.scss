@@ -1,0 +1,110 @@
+.modal {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(321deg, rgba(0, 0, 0, 0.8) 60%, #5a89ffc0 100%);
+    .modal-header {
+        border: none;
+        background-color: $aliz;
+        .column-header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .modal-bg {
+                margin: -100px auto 0 auto;
+                color: $white;
+                svg {
+                    width: 150px;
+                    height: auto;
+                    border: 5px solid $white;
+                    padding: 25px;
+                    border-radius: 50%;
+                    background-color: $aliz;
+                }
+            }
+            .modal-title {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 35px;
+                color: $white;
+                text-align: center;
+                margin: 40px 0;
+                font-family: "Oswald";
+            }
+        }
+    }
+    .modal-body {
+        padding: 60px 10% 30px 10%;
+        p {
+            text-align: center;
+            font-size: 26px;
+            color: black;
+            font-weight: bold;
+            font-family: "Oswald";
+        }
+    }
+    .modal-footer {
+        border: none;
+        justify-content: center;
+        padding-bottom: 30px;
+        .btn-aliz {
+            background-color: $aliz;
+            color: white;
+            width: auto;
+            height: auto;
+            padding: 10px 70px;
+            font-size: 25px;
+            border-radius: 50px;
+            &:hover,
+            &:focus {
+                background-color: $white;
+                border: 1px solid $aliz;
+                color: $aliz;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991.98px) {
+    .modal {
+        .modal-header {
+            .column-header {
+                .modal-title {
+                    padding: 0 50px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 575.98px) {
+    .modal {
+        background: linear-gradient(321deg, rgba(0, 0, 0, 1) 60%, #5a89ff 100%);
+        .modal-header {
+            .column-header {
+                .modal-bg {
+                    margin: -75px auto 0 auto;
+                    color: $white;
+                    svg {
+                        width: 130px;
+                        padding: 20px;
+                    }
+                }
+                .modal-title {
+                    font-size: 25px;
+                    padding: 0 20px;
+                }
+            }
+        }
+        .modal-body {
+            padding: 60px 10% 0 10%;
+            p {
+                font-size: 22px;
+            }
+        }
+        .modal-footer {
+            padding-bottom: 20px;
+            .btn-aliz {
+                font-size: 20px;
+            }
+        }
+    }
+}
+

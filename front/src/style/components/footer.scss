@@ -1,0 +1,22 @@
+.footer-view {
+    position: relative;
+    top: 15vh;
+    text-align: center;
+    background-color: $lightblack;
+    padding: 10px 0;
+    .copyright {
+        width: 100vw;
+        padding: 20px 0;
+        color: $smokywhite;
+        font-style: italic;
+    }
+}
+
+@media screen and (max-width: 1199.98px) {
+    .footer-view {
+        width: 105vw;
+        .copyright {
+            width: 105vw;
+        }
+    }
+}

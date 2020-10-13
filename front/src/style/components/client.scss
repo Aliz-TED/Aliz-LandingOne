@@ -1,0 +1,126 @@
+.contact-view {
+    form {
+        position: relative;
+        background-color: rgba(255, 255, 255, 1);
+        top: 13vh;
+        border-radius: 15px;
+        padding: 20px 80px;
+        z-index: 500;
+        width: 100%;
+        .all-input {
+            display: flex;
+            flex-direction: column;
+            padding: 30px 0px;
+            .text-danger {
+                margin-bottom: -20px;
+                margin-left: 15px;
+                padding: 0;
+                font-size: 12px;
+            }
+            .containerInput {
+                position: relative;
+                width: 100%;
+                input {
+                    margin-top: 60px;
+                    height: 40px;
+                    border: 1px solid lightgray;
+                    width: 100%;
+                    padding: 3px 10px;
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid $darkgrey;
+                    &::placeholder {
+                        color: $black;
+                        font-weight: bold;
+                        font-family: "Roboto";
+                    }
+                    &:focus {
+                        &::placeholder {
+                            color: $aliz;
+                            border: none;
+                        }
+                    }
+                }
+                @for $i from 1 through 6 {
+                    .border-#{$i} ~ .focusBorder-#{$i} {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 2px;
+                        background-color: $aliz;
+                        transition: 0.4s;
+                    }
+                    .border-#{$i}:focus ~ .focusBorder-#{$i} {
+                        width: 100%;
+                        transition: 0.4s;
+                    }
+                }
+            }
+        }
+        h2 {
+            padding: 35px 0 25px 0;
+            text-align: center;
+            width: 100%;
+            color: $lightblack;
+            text-transform: uppercase;
+            font-family: "Oswald";
+            font-size: 40px;
+        }
+        p {
+            text-align: center;
+            font-size: 15px;
+            font-style: italic;
+            font-family: "Oswald";
+            color: $grey;
+            margin-bottom: 0;
+        }
+        button {
+            background-color: $aliz;
+            color: $white;
+            border: none;
+            height: 55px;
+            width: 100%;
+            border-radius: 30px;
+            margin-top: 100px;
+            font-size: 20px;
+            margin-bottom: 0px;
+            &:hover {
+                background-color: $white;
+                border: 2px solid $aliz;
+                color: $aliz;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .contact-view {
+        margin: auto;
+        form {
+            position: relative;
+            top: unset;
+            margin-top: 5vh;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991.98px) {
+    .contact-view {
+        form {
+            position: relative;
+            top: unset;
+            margin-top: 5vh;
+        }
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .contact-view {
+        margin: auto;
+        form {
+            position: relative;
+            padding: 20px 50px;
+        }
+    }
+}
