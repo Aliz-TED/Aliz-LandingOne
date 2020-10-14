@@ -5,13 +5,12 @@ import PopSimul from './PopSimul'
 
 
 export default function Simulation() {
-    const [hourlyrate, setHourlyrate] = useState(0)
-    const [nbrbill, setNbrbill] = useState(0)
-    const [timebybill, setTimebybill] = useState(0)
+    const [hourlyrate, setHourlyrate] = useState('')
+    const [nbrbill, setNbrbill] = useState('')
+    const [timebybill, setTimebybill] = useState('')
     const [calcul, setCalcul] = useState(0)
     const [spendTime, setSpendTime] = useState(0)
     const { register, handleSubmit } = useForm();
-
 
     const data = {
         "nbrBill": parseInt(nbrbill),
@@ -24,7 +23,7 @@ export default function Simulation() {
     }
 
     const onSubmit = error => {
-        console.log(error)
+        // console.log(error)
         if (error === undefined || error === false || error === '') {
             alert('Les erreurs ne sont pas corrigées')
         }
@@ -43,7 +42,7 @@ export default function Simulation() {
         <div className="simulation-view container-fluid">
 
             <div className="row header-simulation">
-                <h4 className="col-xl-6">Et si on vous révélait combien vous avez perdu ce mois-ci ? </h4>
+                <h4 className="col-xl-10">Et si on vous révélait combien vous perdez chaque mois ? </h4>
             </div>
 
             <form className="row" onSubmit={handleSubmit(onSubmit)}>
@@ -53,6 +52,7 @@ export default function Simulation() {
                         <input type="text"
                             name="hourlyrate"
                             id="hourlyrate"
+                            placeholder="en euros"
                             value={hourlyrate}
                             onChange={(e) => setHourlyrate(e.target.value)}
                             ref={register({ required: true, maxLength: 10, pattern: /^[0-9]+$/ })}
@@ -65,10 +65,11 @@ export default function Simulation() {
                             type="text"
                             name="nbrbill"
                             id="nbrbill"
+                            placeholder="par jour"
                             value={nbrbill}
                             onChange={(e) => setNbrbill(e.target.value)}
                             ref={register({ required: true, maxLength: 10, pattern: /^[0-9]+$/ })} />
-                        <label htmlFor="name">Nombre de clients par jour</label>
+                        <label htmlFor="name">Votre nombre de patients</label>
                     </div>
 
                     <div className="containerInput">
@@ -76,14 +77,16 @@ export default function Simulation() {
                             type="text"
                             name="timebybill"
                             id="timebybill"
+                            placeholder="en minutes"
+                            alt="temps administratif par patient" 
+                            title="Votre temps moyen passé par patient correspond à la rédaction de facture, l'envoie d'email, le traitement en comptabilité etc..." 
                             value={timebybill}
                             onChange={(e) => setTimebybill(e.target.value)}
                             ref={register({ required: true, maxLength: 10, pattern: /^[0-9]+$/ })} />
-                        <label htmlFor="name">Temps par facture (minutes)</label>
+                        <label htmlFor="name">Temps administratif / patient</label>
                     </div>
 
-
-                    <PopSimul calcul={simul} />
+                    <PopSimul calcul={simul}/>
 
                 </div>
             </form>

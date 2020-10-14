@@ -23,10 +23,22 @@ $cleanPurple: #4f659f;
 $red: #b40000;
 $strongred: #f10000;
 
-@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    font-style: normal;
+    // font-weight: 400;
+    src: url('../fonts/GlacialIndifference-Bold.otf'); /* IE9 Compat Modes */
+  }

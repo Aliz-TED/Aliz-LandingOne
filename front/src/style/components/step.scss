@@ -8,10 +8,10 @@
         flex-direction: column;
         color: $white;
         padding-left: 10%;
-        padding-top: 50px;
+        padding-top: 40px;
         h3 {
-            font-size: 60px;
-            font-family: "Oswald";
+            font-size: 70px;
+            font-family: "Glacial Indifference", sans-serif;
             color: $aliz;
         }
     }
@@ -20,14 +20,22 @@
         display: flex;
         margin-bottom: 110px;
         h4 {
+            font-family: "Glacial Indifference", sans-serif;
+
             font-size: 120px;
             color: $aliz;
             padding-left: 25px;
         }
         p {
+            font-family: "Quicksand", sans-serif;
+            font-weight: bold;
             color: $white;
             padding: 0 20px;
-            font-size: 20px;
+            font-size: 19px;
+        }
+        i{
+            font-size: 13px;
+            color: $lightgrey;
         }
     }
 }
@@ -37,7 +45,7 @@
         top: 0;
         .all-step {
             flex-direction: column;
-            div{
+            div {
                 margin-bottom: 50px;
             }
         }

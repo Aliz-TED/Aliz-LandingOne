@@ -32,7 +32,7 @@
                     &::placeholder {
                         color: $black;
                         font-weight: bold;
-                        font-family: "Roboto";
+                        font-family: "Glacial Indifference";
                     }
                     &:focus {
                         &::placeholder {
@@ -64,18 +64,20 @@
             width: 100%;
             color: $lightblack;
             text-transform: uppercase;
-            font-family: "Oswald";
+            font-family: "Glacial Indifference";
             font-size: 40px;
         }
         p {
             text-align: center;
             font-size: 15px;
             font-style: italic;
-            font-family: "Oswald";
+            font-family: "Quicksand";
+            font-weight: bold;
             color: $grey;
             margin-bottom: 0;
         }
         button {
+            font-family: "Glacial Indifference";
             background-color: $aliz;
             color: $white;
             border: none;

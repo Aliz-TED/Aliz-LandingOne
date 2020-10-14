@@ -66,8 +66,8 @@ export default function Client() {
         <div className="contact-view container">
             <form onSubmit={contactSubmit} className="offset-xl-3 col-xl-6" id="contact" >
 
-                <h2>Nous Contacter</h2>
-                <p>Un de nos experts vous recontactera dans les 48h. Vos données resteront confidentielles</p>
+                <h2>VOS COORDONNÉES</h2>
+                <p>Renseignez vos informations afin que nous puissions vous aider à déléguer vos tâches chronophages</p>
 
                 <div className="all-input">
                     <div className="containerInput">
